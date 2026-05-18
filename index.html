@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduFlow — Learn Without Limits</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Edu<span>Flow</span></a>
+    <div class="nav-right">
+      <!-- Cart Badge (Outline 10: Dynamic UI) -->
+      <button class="cart-btn" id="cart-icon" style="display:none">
+        🛒 Cart <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <div id="nav-auth">
+        <a href="login.html" class="btn-ghost">Login</a>
+        <a href="register.html" class="btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">🎓 100+ Courses Available</div>
+      <h1>Learn <span class="gradient-text">Anything.</span><br/>Become <span class="gradient-text">Anyone.</span></h1>
+      <p>Master in-demand skills with world-class instructors. Start your journey today — free!</p>
+      <div class="hero-buttons">
+        <a href="register.html" class="btn-primary large">Start Learning Free</a>
+        <a href="#courses" class="btn-ghost large">Browse Courses</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Theme Toggle (Outline 7: Cookies) -->
+  <div class="theme-bar">
+    <span>Theme:</span>
+    <button class="theme-btn" id="btn-dark">🌙 Dark</button>
+    <button class="theme-btn" id="btn-light">☀️ Light</button>
+  </div>
+
+  <!-- Search & Courses -->
+  <section id="courses" class="courses-section">
+    <div class="section-header">
+      <div>
+        <h2>Featured Courses</h2>
+        <p class="subtitle">Handpicked by our team</p>
+      </div>
+      <!-- Outline 4: Event Listeners (input event) -->
+      <input type="text" id="search-input" placeholder="🔍 Search courses..." class="search-input" />
+    </div>
+
+    <!-- Live counter (Outline 10: Dynamic UI) -->
+    <p class="course-counter" id="course-counter">Showing 0 courses</p>
+
+    <div id="courses-grid" class="courses-grid"></div>
+    <div id="empty-msg" class="empty-msg" style="display:none">No courses found.</div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 EduFlow. Built with ❤️ for learners everywhere.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

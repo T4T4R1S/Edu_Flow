@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course — EduFlow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">Edu<span>Flow</span></a>
+    <div class="nav-right">
+      <button class="cart-btn" id="cart-icon" style="display:none">
+        🛒 Cart <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <div id="nav-auth"></div>
+    </div>
+  </nav>
+
+  <div class="course-page">
+
+    <!-- Left column -->
+    <div class="course-main">
+      <div id="course-loading" class="loading-box">⏳ Loading course...</div>
+
+      <div id="course-content" style="display:none">
+        <span class="tag">Course</span>
+        <h1 id="course-title"></h1>
+        <p id="course-description" class="course-desc"></p>
+
+        <div class="instructor-row">
+          <div class="avatar" id="instructor-avatar"></div>
+          <div>
+            <p class="small-label">Instructor</p>
+            <p id="instructor-name" class="bold"></p>
+          </div>
+        </div>
+
+        <!-- Progress (Outline 10: Dynamic UI) -->
+        <div id="progress-section" style="display:none" class="progress-box">
+          <div class="progress-header">
+            <span>Your Progress</span>
+            <span id="progress-percent" class="progress-pct">0%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-bar" style="width:0%"></div>
+          </div>
+          <p id="progress-label" class="small-label"></p>
+        </div>
+
+        <!-- Lessons -->
+        <h2 style="margin-top:2rem">Course Content</h2>
+        <div id="lessons-list"></div>
+      </div>
+    </div>
+
+    <!-- Right column: Enroll card -->
+    <div class="course-sidebar">
+      <div class="enroll-card" id="enroll-card" style="display:none">
+        <img id="course-thumbnail" src="" alt="thumbnail" class="enroll-thumb" />
+        <div class="enroll-body">
+          <p class="price-tag">Free</p>
+          <button id="enroll-btn" class="btn-primary full" >Enroll Now</button>
+          <p id="enroll-msg" class="enroll-msg"></p>
+          <!-- Add to Cart button -->
+          <button id="cart-btn" class="btn-ghost full"  style="margin-top:0.5rem">🛒 Add to Cart</button>
+          <div class="enroll-perks">
+            <p>✅ Full lifetime access</p>
+            <p>📱 Access on all devices</p>
+            <p>🏆 Certificate of completion</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/course.js"></script>
+</body>
+</html>

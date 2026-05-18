@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart — EduFlow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">Edu<span>Flow</span></a>
+    <div class="nav-right">
+      <button class="cart-btn" id="cart-icon">
+        🛒 Cart <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <div id="nav-auth"></div>
+    </div>
+  </nav>
+
+  <div class="cart-page">
+    <h1>🛒 Your Cart</h1>
+    <p class="subtitle" id="cart-summary"></p>
+
+    <div id="cart-items"></div>
+
+    <div id="cart-empty" class="empty-msg" style="display:none">
+      Your cart is empty. <a href="index.html">Browse courses →</a>
+    </div>
+
+    <div id="cart-footer" class="cart-footer" style="display:none">
+      <button class="btn-ghost" id="clear-cart-btn">🗑️ Clear Cart</button>
+      <button class="btn-primary" id="enroll-all-btn">✅ Enroll in All (Free!)</button>
+    </div>
+
+    <div id="enroll-result" class="alert alert-success" style="display:none"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

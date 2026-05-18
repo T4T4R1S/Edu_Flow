@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard — EduFlow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">Edu<span>Flow</span></a>
+    <div class="nav-right">
+      <span id="nav-greeting" class="nav-greeting"></span>
+      <a href="index.html" class="btn-ghost">Home</a>
+      <button id="logout-btn" class="btn-ghost">Logout</button>
+    </div>
+  </nav>
+
+  <div class="dashboard-page">
+    <h1 id="dash-title">Dashboard</h1>
+    <p id="dash-subtitle" class="subtitle"></p>
+
+    <!-- Stats Row (Outline 10: Live Counter) -->
+    <div class="stats-row" id="stats-row"></div>
+
+    <!-- ===== STUDENT SECTION ===== -->
+    <div id="student-section" style="display:none">
+      <h2>My Enrolled Courses</h2>
+      <div id="student-courses" class="courses-grid"></div>
+      <div id="student-empty" class="empty-msg" style="display:none">
+        You haven't enrolled in any courses yet. <a href="index.html">Browse courses →</a>
+      </div>
+    </div>
+
+    <!-- ===== INSTRUCTOR SECTION ===== -->
+    <div id="instructor-section" style="display:none">
+
+      <!-- Create Course Form -->
+      <div class="create-card">
+        <h2>➕ Create New Course</h2>
+        <div id="create-error" class="alert alert-error" style="display:none"></div>
+        <div id="create-success" class="alert alert-success" style="display:none"></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Course Title</label>
+            <input type="text" id="new-title" placeholder="e.g. Complete JavaScript Bootcamp" class="input-field" />
+          </div>
+          <div class="form-group">
+            <label>Thumbnail URL</label>
+            <input type="text" id="new-thumbnail" placeholder="https://..." class="input-field" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="new-description" rows="3" placeholder="What will students learn?" class="input-field"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Add Lesson Title</label>
+          <div class="lesson-input-row">
+            <input type="text" id="new-lesson" placeholder="e.g. Introduction to Variables" class="input-field" />
+            <button class="btn-ghost" id="add-lesson-btn">+ Add</button>
+          </div>
+        </div>
+        <div id="lessons-preview" class="lessons-preview"></div>
+        <button id="create-btn" class="btn-primary" >Create Course</button>
+      </div>
+
+      <!-- Instructor's courses -->
+      <h2 style="margin-top:2rem">My Courses</h2>
+      <div id="instructor-courses"></div>
+      <div id="instructor-empty" class="empty-msg" style="display:none">You haven't created any courses yet.</div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
